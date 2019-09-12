@@ -1,0 +1,145 @@
+<swal
+    #deleteSwal
+    title="¿Estas seguro que desea eliminar?"
+    text="los datos no se recuperaran"
+    type="warning"
+    [showCancelButton]="true"
+    [focusCancel]="true">
+</swal>
+
+<swal
+    #alertSwal
+    title=""
+    text=""
+    type="success">
+</swal>
+
+<div style="width: 100vw;">
+  <div class="row m-0">
+    <div class="col-md-8 mb-3 text-right offset-md-2">
+      <button class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal"
+              data-target="#modalUser">
+        Agregar
+      </button>
+    </div>
+
+    <div class="col-md-6  offset-md-3" *ngFor="let user of users">
+      <div class="card mt-4">
+        <h3 class="card-header bg-light ">{{user.data.nombre}}</h3>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-12">
+                  <b>Superficie: </b>{{user.data.superficie}}
+                </div>
+                <div class="col-md-12">
+                  <b>Cabecera: </b>{{user.data.cabecera}}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3   ">
+              <button class="btn btn-block btn-primary   btn1"
+                      (click)="openModal(content, newMunicipioForm,user)"
+              >Editar
+              </button>
+            </div>
+            <div class="col-md-3 ">
+              <button class="btn btn-block btn-danger btn2"
+                      [swal]="deleteSwal"
+                      (confirm)="delete(user)"
+              >Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #content>
+  <div class="row m-0">
+    <div class="col-md-12 text-center mt-3">
+      <h5>Nuevo municipio</h5>
+    </div>
+    <div class="col-md-12 py-3">
+      <form (ngSubmit)="upsert(newMunicipioForm.value)" [formGroup]="newMunicipioForm">
+        <div class="row">
+          <input type="hidden" formControlName="id">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" formControlName="nombre" class="form-control" id="nombre">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="cabecera">Cabecera</label>
+              <input class="form-control" type="text" formControlName="cabecera" id="cabecera">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="superficie">Superficie</label>
+              <input class="form-control" type="text" formControlName="superficie" id="superficie">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="altitud">Altitud</label>
+              <input class="form-control" type="numeric" formControlName="altitud" id="altitud">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="clima">Clima</label>
+              <select name="clima">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="latitud">Latitud</label>
+              <input class="form-control" type="numeric" formControlName="latitud" id="latitud">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="longitud">Longitud</label>
+              <input class="form-control" type="numeric" formControlName="longitud" id="longitud">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="significado">Significado</label>
+              <input class="form-control" type="numeric" formControlName="significado" id="significado">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input id="inundacion" type="checkbox" name="inundacion"> Inundación
+              <input id="deslave" type="checkbox" name="deslave"> Deslave
+              <input id="zonasismica" type="checkbox" name="zonasismica"> Zona sísmica<br>
+              <input id="incendio" type="checkbox" name="incendio"> Incendio
+              <input id="zonavolcanica" type="checkbox" name="zonavolcanica"> Zona volcanica
+              <input id="derrumbes" type="checkbox" name="derrumbes"> Derrumbes
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <button type="cancel" class="btn btn-danger">Cancelar</button>
+          </div>
+          <div class="col-md-6 text-center">
+            <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">Agregar</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</ng-template>
