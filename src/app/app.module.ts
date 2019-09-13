@@ -12,12 +12,16 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
 import { MunicipiosComponent } from './components/municipios/municipios.component';
 import { LoginComponent } from './components/login/login.component';
+import { SelectMultipleComponent } from './components/select-multiple/select-multiple.component';
+import {MatFormFieldModule, MatSelectModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MunicipiosComponent
+    MunicipiosComponent,
+    SelectMultipleComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { LoginComponent } from './components/login/login.component';
     ReactiveFormsModule,
     SweetAlert2Module.forRoot(),
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

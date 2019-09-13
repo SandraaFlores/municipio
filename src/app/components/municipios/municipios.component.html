@@ -30,26 +30,40 @@
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <b>Superficie: </b>{{user.data.superficie}}
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <b>Cabecera: </b>{{user.data.cabecera}}
+                </div>
+                <div class="col-md-6">
+                  <b>Altitud: </b>{{user.data.altitud}}
+                </div>
+                <div class="col-md-6">
+                  <b>Clima: </b>{{user.data.clima}}
+                </div>
+                <div class="col-md-6">
+                  <b>Latitud: </b>{{user.data.latitud}}
+                </div>
+                <div class="col-md-6">
+                  <b>Longitud: </b>{{user.data.longitud}}
+                </div>
+                <div class="col-md-6">
+                  <b>Significado: </b>{{user.data.significado}}
+                </div>
+                <div class="col-md-6">
+                  <b>Desastre(s): </b>{{user.data.desastre}}
                 </div>
               </div>
             </div>
             <div class="col-md-3   ">
-              <button class="btn btn-block btn-primary   btn1"
-                      (click)="openModal(content, newMunicipioForm,user)"
-              >Editar
-              </button>
+              <button class="btn btn-block btn-primary btn1"
+                      (click)="openModal(content, newMunicipioForm,user)">Editar</button>
             </div>
             <div class="col-md-3 ">
               <button class="btn btn-block btn-danger btn2"
                       [swal]="deleteSwal"
-                      (confirm)="delete(user)"
-              >Eliminar
-              </button>
+                      (confirm)="delete(user)">Eliminar</button>
             </div>
           </div>
         </div>
@@ -61,10 +75,10 @@
 
 <ng-template #content>
   <div class="row m-0">
-    <div class="col-md-12 text-center mt-3">
+    <div class="col-md-12 text-center mt6">
       <h5>Nuevo municipio</h5>
     </div>
-    <div class="col-md-12 py-3">
+    <div class="col-md-12 py6">
       <form (ngSubmit)="upsert(newMunicipioForm.value)" [formGroup]="newMunicipioForm">
         <div class="row">
           <input type="hidden" formControlName="id">
@@ -89,57 +103,55 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="altitud">Altitud</label>
-              <input class="form-control" type="numeric" formControlName="altitud" id="altitud">
+              <input class="form-control" type="text" formControlName="altitud" id="altitud">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
-              <label for="clima">Clima</label>
-              <select name="clima">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-              </select>
+              <mat-form-field>
+                <mat-label>Climas</mat-label>
+                <mat-select [formControl]="climas" multiple>
+                  <mat-option *ngFor="let climas of tiposClimas" [value]="climas">{{climas}}</mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label for="latitud">Latitud</label>
-              <input class="form-control" type="numeric" formControlName="latitud" id="latitud">
+              <input class="form-control" type="text" formControlName="latitud" id="latitud">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label for="longitud">Longitud</label>
-              <input class="form-control" type="numeric" formControlName="longitud" id="longitud">
+              <input class="form-control" type="text" formControlName="longitud" id="longitud">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label for="significado">Significado</label>
-              <input class="form-control" type="numeric" formControlName="significado" id="significado">
+              <input class="form-control" type="text" formControlName="significado" id="significado">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
-            <input id="inundacion" type="checkbox" name="inundacion"> Inundación
-              <input id="deslave" type="checkbox" name="deslave"> Deslave
-              <input id="zonasismica" type="checkbox" name="zonasismica"> Zona sísmica<br>
-              <input id="incendio" type="checkbox" name="incendio"> Incendio
-              <input id="zonavolcanica" type="checkbox" name="zonavolcanica"> Zona volcanica
-              <input id="derrumbes" type="checkbox" name="derrumbes"> Derrumbes
+              <mat-form-field>
+                <mat-label>Desastre natural</mat-label>
+                <mat-select [formControl]="desastre" multiple>
+                  <mat-option *ngFor="let desastre of tiposDesastres" [value]="desastre">{{desastre}}</mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
           </div>
-          <div class="col-md-6 text-center">
-            <button type="cancel" class="btn btn-danger">Cancelar</button>
-          </div>
-          <div class="col-md-6 text-center">
-            <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">Agregar</button>
+
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">
+              Agregar
+            </button>
           </div>
         </div>
       </form>
-
     </div>
   </div>
 </ng-template>

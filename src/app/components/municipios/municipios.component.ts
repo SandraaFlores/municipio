@@ -12,6 +12,10 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class MunicipiosComponent implements OnInit {
   public users = [];
   public user;
+  climas = new FormControl();
+  desastre = new FormControl();
+  tiposClimas: string[] = ['Cálido', 'Semiárido', 'Seco', 'Templado', 'Semifrío', 'Frío'];
+  tiposDesastres: string[] = ['Inundación', 'Deslave', 'Zona sísmica', 'Incendio forestal', 'Zona volcánica', 'Derrumbes'];
   public documentId = null;
   public currentStatus = 1;
   public newMunicipioForm;
@@ -28,10 +32,11 @@ export class MunicipiosComponent implements OnInit {
       superficie: new FormControl('', Validators.required),
       altitud: new FormControl('', Validators.required),
       id: new FormControl(''),
-      clima: new FormControl('', Validators.required),
+      clima: new FormControl(''),
       latitud: new FormControl('', Validators.required),
       longitud: new FormControl('', Validators.required),
       significado: new FormControl('', Validators.required),
+      desastre: new FormControl('')
     });
     this.newMunicipioForm.setValue({
       id: '',
@@ -42,7 +47,8 @@ export class MunicipiosComponent implements OnInit {
       clima: '',
       latitud: '',
       longitud: '',
-      significado: ''
+      significado: '',
+      desastre: ''
     });
   }
 
@@ -77,7 +83,8 @@ export class MunicipiosComponent implements OnInit {
         clima: user.data.clima,
         latitud: user.data.latitud,
         longitud: user.data.longitud,
-        significado: user.data.significado
+        significado: user.data.significado,
+        desastre: user.data.desastre
       });
       this.currentStatus = 2;
     }
@@ -120,7 +127,8 @@ export class MunicipiosComponent implements OnInit {
       clima: form.clima,
       latitud: form.latitud,
       longitud: form.longitud,
-      significado: form.significado
+      significado: form.significado,
+      desastre: form.desastre
     };
 
     if (this.currentStatus === 1) {
@@ -140,7 +148,8 @@ export class MunicipiosComponent implements OnInit {
       clima: '',
       latitud: '',
       longitud: '',
-      significado: ''
+      significado: '',
+      desastre: ''
     });
   }
 
