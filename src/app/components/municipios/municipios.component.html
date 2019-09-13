@@ -14,6 +14,7 @@
     type="success">
 </swal>
 
+
 <div style="width: 100vw;">
   <div class="row m-0">
     <div class="col-md-8 mb-3 text-right offset-md-2">
@@ -144,6 +145,24 @@
               </mat-form-field>
             </div>
           </div>
+
+          <!-- app.component.html -->
+          <div class="container">
+            <div class="form-group">
+              <label>Ingresa dirección</label>
+              <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Busca una dirección" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+            </div>
+
+            <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+              <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                          (dragEnd)="markerDragEnd($event)"></agm-marker>
+            </agm-map>
+
+            <h5>Dirección: {{address}}</h5>
+            <div>Latitud: {{latitude}}</div>
+            <div>Longitud: {{longitude}}</div>
+          </div>
+
 
           <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">

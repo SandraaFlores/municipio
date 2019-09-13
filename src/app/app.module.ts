@@ -14,7 +14,7 @@ import { MunicipiosComponent } from './components/municipios/municipios.componen
 import { LoginComponent } from './components/login/login.component';
 import { SelectMultipleComponent } from './components/select-multiple/select-multiple.component';
 import {MatFormFieldModule, MatSelectModule} from '@angular/material';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -38,6 +38,11 @@ import {MatFormFieldModule, MatSelectModule} from '@angular/material';
     NgbModule,
     MatFormFieldModule,
     MatSelectModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCnM5HbC3dmUgGG68zuZQZKt7uA2kdiPOE',
+      language: 'en',
+      libraries: ['geometry', 'places']
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,22 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
 import {SwalComponent} from '@sweetalert2/ngx-sweetalert2';
 import {FirestoreService} from '../../services/firestore.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-
+import { MapsAPILoader, MouseEvent } from '@agm/core';
 @Component({
   selector: 'app-municipios',
   templateUrl: './municipios.component.html',
   styleUrls: ['./municipios.component.css']
 })
 export class MunicipiosComponent implements OnInit {
+  title: string;
+  latitude: number;
+  longitude: number;
+  zoom: number;
+  address: string;
+  private geoCoder;
+
   public users = [];
   public user;
   climas = new FormControl();
@@ -23,9 +30,12 @@ export class MunicipiosComponent implements OnInit {
   @ViewChild('exampleModal') private modal;
   // @ts-ignore
   @ViewChild('alertSwal') private alertSwal: SwalComponent;
+  // @ts-ignore
+  @ViewChild('search') public searchElementRef: ElementRef;
 
   constructor(private firestoreService: FirestoreService,
-              private modalService: NgbModal) {
+              private modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
+              private ngZone: NgZone) {
     this.newMunicipioForm = new FormGroup({
       nombre: new FormControl('', Validators.required),
       cabecera: new FormControl('', Validators.required),
@@ -53,6 +63,28 @@ export class MunicipiosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.mapsAPILoader.load().then(() => {
+      this.setCurrentLocation();
+      this.geoCoder = new google.maps.Geocoder();
+
+      const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+        types: ['address']
+      });
+      autocomplete.addListener('place_changed', () => {
+        this.ngZone.run(() => {
+
+          const place: google.maps.places.PlaceResult = autocomplete.getPlace();
+
+          if (place.geometry === undefined || place.geometry === null) {
+            return;
+          }
+          this.latitude = place.geometry.location.lat();
+          this.longitude = place.geometry.location.lng();
+          this.zoom = 12;
+        });
+      });
+    });
+
     this.firestoreService.getUsers().subscribe((usersSnapshot) => {
       this.users = [];
       usersSnapshot.forEach((userData: any) => {
@@ -150,6 +182,44 @@ export class MunicipiosComponent implements OnInit {
       longitud: '',
       significado: '',
       desastre: ''
+    });
+  }
+
+  // Get Current Location Coordinates
+  private setCurrentLocation() {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        this.zoom = 8;
+        this.getAddress(this.latitude, this.longitude);
+      });
+    }
+  }
+
+
+  markerDragEnd($event: MouseEvent) {
+    console.log($event);
+    this.latitude = $event.coords.lat;
+    this.longitude = $event.coords.lng;
+    this.getAddress(this.latitude, this.longitude);
+  }
+
+  getAddress(latitude, longitude) {
+    this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
+      console.log(results);
+      console.log(status);
+      if (status === 'OK') {
+        if (results[0]) {
+          this.zoom = 12;
+          this.address = results[0].formatted_address;
+        } else {
+          window.alert('No results found');
+        }
+      } else {
+        window.alert('Geocoder failed due to: ' + status);
+      }
+
     });
   }
 
