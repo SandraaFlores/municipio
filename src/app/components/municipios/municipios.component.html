@@ -14,7 +14,6 @@
     type="success">
 </swal>
 
-
 <div style="width: 100vw;">
   <div class="row m-0">
     <div class="col-md-8 mb-3 text-right offset-md-2">
@@ -75,71 +74,72 @@
 
 
 <ng-template #content>
-  <div class="row m-0">
-    <div class="col-md-12 text-center mt6">
+  <div class="row m-0 ">
+    <div class="col-md-12 text-center m6 modal-header" >
       <h5>Nuevo municipio</h5>
     </div>
-    <div class="col-md-12 py6">
+
+    <div class="col-md-12 p6">
       <form (ngSubmit)="upsert(newMunicipioForm.value)" [formGroup]="newMunicipioForm">
         <div class="row">
           <input type="hidden" formControlName="id">
-          <div class="col-md-12">
+
+          <div class="col-md-6">
             <div class="form-group">
               <label for="nombre">Nombre</label>
               <input type="text" formControlName="nombre" class="form-control" id="nombre">
             </div>
           </div>
-          <div class="col-md-12">
+
+          <div class="col-md-6">
             <div class="form-group">
               <label for="cabecera">Cabecera</label>
               <input class="form-control" type="text" formControlName="cabecera" id="cabecera">
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
-              <label for="superficie">Superficie</label>
+              <label for="superficie">Superficie(km2)</label>
               <input class="form-control" type="text" formControlName="superficie" id="superficie">
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <label for="altitud">Altitud</label>
               <input class="form-control" type="text" formControlName="altitud" id="altitud">
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <mat-form-field>
                 <mat-label>Climas</mat-label>
-                <mat-select [formControl]="climas" multiple>
+                <mat-select formControlName="clima" id="clima">
                   <mat-option *ngFor="let climas of tiposClimas" [value]="climas">{{climas}}</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <label for="latitud">Latitud</label>
-              <input class="form-control" type="text" formControlName="latitud" id="latitud">
-            </div>
+              <input class="form-control" type="text" formControlName="latitud" id="latitud"  value="{{latitude}}" readonly="readonly"></div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <label for="longitud">Longitud</label>
-              <input class="form-control" type="text" formControlName="longitud" id="longitud">
-            </div>
+              <input class="form-control" type="text" formControlName="longitud" id="longitud" value="{{longitude}}" readonly="readonly"></div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <label for="significado">Significado</label>
               <input class="form-control" type="text" formControlName="significado" id="significado">
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <mat-form-field>
                 <mat-label>Desastre natural</mat-label>
-                <mat-select [formControl]="desastre" multiple>
+                <mat-select multiple formControlName="desastre" id="desastre">
                   <mat-option *ngFor="let desastre of tiposDesastres" [value]="desastre">{{desastre}}</mat-option>
                 </mat-select>
               </mat-form-field>

@@ -31,7 +31,7 @@ export class MunicipiosComponent implements OnInit {
   // @ts-ignore
   @ViewChild('alertSwal') private alertSwal: SwalComponent;
   // @ts-ignore
-  @ViewChild('search') public searchElementRef: ElementRef;
+  @ViewChild('search', { static: false }) searchElementRef: ElementRef;
 
   constructor(private firestoreService: FirestoreService,
               private modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
@@ -42,11 +42,11 @@ export class MunicipiosComponent implements OnInit {
       superficie: new FormControl('', Validators.required),
       altitud: new FormControl('', Validators.required),
       id: new FormControl(''),
-      clima: new FormControl(''),
-      latitud: new FormControl('', Validators.required),
-      longitud: new FormControl('', Validators.required),
+      clima: new FormControl('', Validators.required),
+      latitud: new FormControl(''),
+      longitud: new FormControl(''),
       significado: new FormControl('', Validators.required),
-      desastre: new FormControl('')
+      desastre: new FormControl('', Validators.required)
     });
     this.newMunicipioForm.setValue({
       id: '',
@@ -63,6 +63,16 @@ export class MunicipiosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.firestoreService.getUsers().subscribe((usersSnapshot) => {
+      this.users = [];
+      usersSnapshot.forEach((userData: any) => {
+        this.users.push({
+          id: userData.payload.doc.id,
+          data: userData.payload.doc.data()
+        });
+      });
+    });
+
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
       this.geoCoder = new google.maps.Geocoder();
@@ -84,16 +94,6 @@ export class MunicipiosComponent implements OnInit {
         });
       });
     });
-
-    this.firestoreService.getUsers().subscribe((usersSnapshot) => {
-      this.users = [];
-      usersSnapshot.forEach((userData: any) => {
-        this.users.push({
-          id: userData.payload.doc.id,
-          data: userData.payload.doc.data()
-        });
-      });
-    });
   }
 
   public openModal(content, newMunicipioForm, user = null) {
@@ -106,6 +106,7 @@ export class MunicipiosComponent implements OnInit {
       this.resetForm();
     });
     if (user != null) {
+
       this.newMunicipioForm.setValue({
         nombre: user.data.nombre,
         cabecera: user.data.cabecera,
@@ -138,16 +139,35 @@ export class MunicipiosComponent implements OnInit {
     }, (error) => {
     });
   }
+
+
   public newUser(data) {
-    this.firestoreService.createUser(data).then(() => {
+    let bandera = true;
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.users.length; i++) {
+      if (this.users[i].data.nombre == data.nombre) {
+        bandera = false;
+        break;
+      }
+    }
+    if (bandera) {
+      this.firestoreService.createUser(data).then(() => {
+        this.resetForm();
+        this.alertSwal.title = 'Correcto';
+        this.alertSwal.type = 'success';
+        this.alertSwal.text = 'Municipio agregado';
+        this.alertSwal.fire();
+        this.modalService.dismissAll();
+      }, (error) => {
+      });
+    } else {
       this.resetForm();
-      this.alertSwal.title = 'Correcto';
-      this.alertSwal.type = 'success';
-      this.alertSwal.text = 'Usuario agregado';
+      this.alertSwal.title = 'Error';
+      this.alertSwal.type = 'error';
+      this.alertSwal.text = 'El municipio ya existe';
       this.alertSwal.fire();
       this.modalService.dismissAll();
-    }, (error) => {
-    });
+    }
   }
 
   public upsert(form) {
@@ -157,8 +177,8 @@ export class MunicipiosComponent implements OnInit {
       superficie: form.superficie,
       altitud: form.altitud,
       clima: form.clima,
-      latitud: form.latitud,
-      longitud: form.longitud,
+      latitud: this.latitude,
+      longitud: this.longitude,
       significado: form.significado,
       desastre: form.desastre
     };

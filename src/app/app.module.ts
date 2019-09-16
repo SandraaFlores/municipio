@@ -39,8 +39,8 @@ import { AgmCoreModule } from '@agm/core';
     MatFormFieldModule,
     MatSelectModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCnM5HbC3dmUgGG68zuZQZKt7uA2kdiPOE',
-      language: 'en',
+      apiKey: 'AIzaSyAuYXawrzjug2cr4cJpHKqO26Bv9c8n4W8',
+      language: 'es',
       libraries: ['geometry', 'places']
     })
   ],
