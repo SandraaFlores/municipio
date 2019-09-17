@@ -4,6 +4,7 @@ import {FirestoreService} from '../../services/firestore.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { MapsAPILoader, MouseEvent } from '@agm/core';
+import * as mun from 'src/json_mun/mun.json';
 @Component({
   selector: 'app-municipios',
   templateUrl: './municipios.component.html',
@@ -106,7 +107,6 @@ export class MunicipiosComponent implements OnInit {
       this.resetForm();
     });
     if (user != null) {
-
       this.newMunicipioForm.setValue({
         nombre: user.data.nombre,
         cabecera: user.data.cabecera,
@@ -153,7 +153,7 @@ export class MunicipiosComponent implements OnInit {
     if (bandera) {
       this.firestoreService.createUser(data).then(() => {
         this.resetForm();
-        this.alertSwal.title = 'Correcto';
+        this.alertSwal.title = '¡Correcto!';
         this.alertSwal.type = 'success';
         this.alertSwal.text = 'Municipio agregado';
         this.alertSwal.fire();
@@ -162,9 +162,9 @@ export class MunicipiosComponent implements OnInit {
       });
     } else {
       this.resetForm();
-      this.alertSwal.title = 'Error';
+      this.alertSwal.title = '¡Error!';
       this.alertSwal.type = 'error';
-      this.alertSwal.text = 'El municipio ya existe';
+      this.alertSwal.text = 'El municipio ' + data.nombre + ' ya existe';
       this.alertSwal.fire();
       this.modalService.dismissAll();
     }

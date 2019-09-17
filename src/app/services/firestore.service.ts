@@ -12,7 +12,7 @@ export class FirestoreService {
     private firestore: AngularFirestore
   ) {}
 
-  public createUser(data: {nombre: string, cabecera: string, superficie: string,
+  public createUser(data: {igecem: string, nombre: string, cabecera: string, superficie: string,
     altitud: string, clima: string, latitud: string, longitud: string, significado: string, desastre: string}) {
     return this.firestore.collection('user').add(data);
   }
