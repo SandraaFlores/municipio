@@ -4,7 +4,7 @@ import {FirestoreService} from '../../services/firestore.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { MapsAPILoader, MouseEvent } from '@agm/core';
-import * as mun from 'src/json_mun/mun.json';
+
 @Component({
   selector: 'app-municipios',
   templateUrl: './municipios.component.html',
@@ -17,6 +17,7 @@ export class MunicipiosComponent implements OnInit {
   zoom: number;
   address: string;
   private geoCoder;
+  filterMun = '';
 
   public users = [];
   public user;
@@ -38,6 +39,7 @@ export class MunicipiosComponent implements OnInit {
               private modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
               private ngZone: NgZone) {
     this.newMunicipioForm = new FormGroup({
+      igecem: new FormControl('', Validators.required),
       nombre: new FormControl('', Validators.required),
       cabecera: new FormControl('', Validators.required),
       superficie: new FormControl('', Validators.required),
@@ -50,6 +52,7 @@ export class MunicipiosComponent implements OnInit {
       desastre: new FormControl('', Validators.required)
     });
     this.newMunicipioForm.setValue({
+      igecem: '',
       id: '',
       nombre: '',
       cabecera: '',
@@ -108,6 +111,7 @@ export class MunicipiosComponent implements OnInit {
     });
     if (user != null) {
       this.newMunicipioForm.setValue({
+        igecem: user.data.igecem,
         nombre: user.data.nombre,
         cabecera: user.data.cabecera,
         superficie: user.data.superficie,
@@ -145,7 +149,7 @@ export class MunicipiosComponent implements OnInit {
     let bandera = true;
     // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < this.users.length; i++) {
-      if (this.users[i].data.nombre == data.nombre) {
+      if (this.users[i].data.nombre === data.nombre) {
         bandera = false;
         break;
       }
@@ -164,7 +168,7 @@ export class MunicipiosComponent implements OnInit {
       this.resetForm();
       this.alertSwal.title = '¡Error!';
       this.alertSwal.type = 'error';
-      this.alertSwal.text = 'El municipio ' + data.nombre + ' ya existe';
+      this.alertSwal.text = 'El municipio ' + data.nombre + ' ya existe.';
       this.alertSwal.fire();
       this.modalService.dismissAll();
     }
@@ -172,6 +176,7 @@ export class MunicipiosComponent implements OnInit {
 
   public upsert(form) {
     const data = {
+      igecem: form.igecem,
       nombre: form.nombre,
       cabecera: form.cabecera,
       superficie: form.superficie,
@@ -192,6 +197,7 @@ export class MunicipiosComponent implements OnInit {
 
   public resetForm() {
     this.newMunicipioForm.setValue({
+      igecem: '',
       nombre: '',
       cabecera: '',
       superficie: '',

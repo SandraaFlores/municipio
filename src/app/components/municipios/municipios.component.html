@@ -7,12 +7,6 @@
     [focusCancel]="true">
 </swal>
 
-<swal
-    #alertSwal
-    title=""
-    text=""
-    type="success">
-</swal>
 
 <div style="width: 100vw;">
   <div class="row m-0">
@@ -20,21 +14,23 @@
       <button class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal" data-target="#modalUser">Agregar</button>
     </div>
 
-    <div class="box">
-      <div class="container-2">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Search..." />
+    <div class="row m-0">
+      <div class="form-group">
+        <input type="text" class="form-control" name="filterMun" placeholder="Buscar" [(ngModel)]="filterMun">
       </div>
     </div>
 
-    <div class="col-md-6  offset-md-3" *ngFor="let user of users">
+    <div class="col-md-6  offset-md-3" *ngFor="let user of users | filter: filterMun" >
       <div class="card mt-4">
         <h3 class="card-header bg-light ">{{user.data.nombre}}</h3>
         <div class="card-body">
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" >
+                  <b>IGECEM: </b>{{user.data.igecem}}
+                </div>
+                <div class="col-md-6" >
                   <b>Superficie: </b>{{user.data.superficie}}
                 </div>
                 <div class="col-md-6">
@@ -87,6 +83,13 @@
       <form (ngSubmit)="upsert(newMunicipioForm.value)" [formGroup]="newMunicipioForm">
         <div class="row">
           <input type="hidden" formControlName="id">
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="igecem">IGECEM</label>
+              <input type="text" formControlName="igecem" class="form-control" id="igecem">
+            </div>
+          </div>
 
           <div class="col-md-6">
             <div class="form-group">
