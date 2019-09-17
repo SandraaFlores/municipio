@@ -15,13 +15,15 @@ import { LoginComponent } from './components/login/login.component';
 import { SelectMultipleComponent } from './components/select-multiple/select-multiple.component';
 import {MatFormFieldModule, MatSelectModule} from '@angular/material';
 import { AgmCoreModule } from '@agm/core';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MunicipiosComponent,
-    SelectMultipleComponent
+    SelectMultipleComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
