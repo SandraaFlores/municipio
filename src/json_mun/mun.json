@@ -9,7 +9,7 @@
     "latitud": 19.9958,
     "longitud": -99.8417,
     "significado": "Okha «Dios» y mbaye «peñasco»: «Peñascos de Dios».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 2,
@@ -21,7 +21,7 @@
     "latitud": 19.3998,
     "longitud": -98.884,
     "significado": "Aculli «hombre», máitl «mano»: «Hombre con mano o brazo».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 3,
@@ -33,7 +33,7 @@
     "latitud": 20.0990629,
     "longitud": -99.8272712,
     "significado": "Atl «agua», cóltic «torcido» y co «en»: «En el agua torcida».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 4,
@@ -45,7 +45,7 @@
     "latitud": 18.8664837,
     "longitud": -99.9001158,
     "significado": "Atl «agua», molloni «manar» y yan «lugar»: «Lugar donde mana el agua». Nombrado en honor al insurgente Pedro Ascencio Alquisiras.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 5,
@@ -57,7 +57,7 @@
     "latitud": 18.8665041,
     "longitud": -99.9001158,
     "significado": "Atl «agua», molloni «manar» y yan «lugar»: «Lugar donde mana el agua». Nombrado en honor al presidente Benito Juárez.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 6,
@@ -69,7 +69,7 @@
     "latitud": 19.16397,
     "longitud": -99.4891727,
     "significado": "Atl «agua», molloni «manar» y yan «lugar»: «Lugar donde mana el agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 7,
@@ -81,7 +81,7 @@
     "latitud": 19.2543187,
     "longitud": -100.0239514,
     "significado": "Atl «agua», manalli «estar tendido» y co «en»: «En el estanque».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 8,
@@ -93,7 +93,7 @@
     "latitud": 18.6996269,
     "longitud": -100.3862512,
     "significado": "Amatl «amate o árbol de papel», tepetl «cerro» y co «en»: «En el cerro de los amates o árboles de papel».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 9,
@@ -105,7 +105,7 @@
     "latitud": 19.1257243,
     "longitud": -98.7843978,
     "significado": "Amatl «papel», queme «señalar» y can «lugar»: «Lugar donde los papeles señalan».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 10,
@@ -117,7 +117,7 @@
     "latitud": 19.9833,
     "longitud": -99.1667,
     "significado": "Atl «agua» y patzca «exprimir»: «Donde se exprime o escurre el agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 11,
@@ -129,7 +129,7 @@
     "latitud": 19.5514,
     "longitud": -98.9161,
     "significado": "Atl «agua», entli «orilla» y co «en»: «En la orilla del agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 12,
@@ -141,7 +141,7 @@
     "latitud": 19.1770714,
     "longitud": -99.4945791,
     "significado": "Atl «agua», tizatl «tierra o cosa blanca» y pan «sobre»: «En el agua o tierra blanca».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 13,
@@ -153,7 +153,7 @@
     "latitud": 19.517983,
     "longitud": -99.3609684,
     "significado": "Atl «agua», tizatl «tierra o cosa blanca» y pan «sobre»: «En el agua o tierra blanca». Nombrado en honor al general Ignacio Zaragoza.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 14,
@@ -165,7 +165,7 @@
     "latitud": 19.7980556,
     "longitud": -99.89317,
     "significado": "Atlacomulli «pozo» y co «en»: «En los pozos».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 15,
@@ -177,7 +177,7 @@
     "latitud": 19.03012,
     "longitud": -98.7894974,
     "significado": "Atlautli «barranca», tla «abundancia»: «Donde abundan las barrancas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 16,
@@ -189,7 +189,7 @@
     "latitud": 19.7252565,
     "longitud": -98.7621809,
     "significado": "Atl «agua», xapochtli «aljibe»: «En el aljibe de agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 17,
@@ -201,7 +201,7 @@
     "latitud": 19.1266022,
     "longitud": -98.8136491,
     "significado": "Ayáhuitl «neblina», pan «sobre» y co «lugar»: «Lugar de neblinas en las alturas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 18,
@@ -213,7 +213,7 @@
     "latitud": 19.1687371,
     "longitud": -99.635865,
     "significado": "Calli «casa», máitl «mano» y yan «lugar»: «Lugar en que se construyen casas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 19,
@@ -225,7 +225,7 @@
     "latitud": 19.2169304,
     "longitud": -99.4562818,
     "significado": "Capulli «capulín» y apan «canal»: «En el canal de capulines».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 20,
@@ -237,7 +237,7 @@
     "latitud": 19.6262642,
     "longitud": -99.1006278,
     "significado": "Coatl «serpiente», calli «casa» y co «lugar»: «En la casa de la serpiente». Nombrado en honor al gobernador Felipe Berriozábal.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 21,
@@ -249,7 +249,7 @@
     "latitud": 18.9223599,
     "longitud": -99.7676931,
     "significado": "Coatl «serpiente» y tepetl «cerro»: «Cerro de las serpientes». Se le denominó «Harinas» por la producción de este producto en el municipio.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 22,
@@ -261,7 +261,7 @@
     "latitud": 19.232597,
     "longitud": -98.8642108,
     "significado": "Cocoh «tórtola», titlán «junto o entre»: «Lugar de tórtolas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 23,
@@ -273,7 +273,7 @@
     "latitud": 19.7765924,
     "longitud": -99.2092896,
     "significado": "Coyotl «coyote», tepetl «cerro» y co «en»: «En el cerro del coyote».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 24,
@@ -285,7 +285,7 @@
     "latitud": 19.6726588,
     "longitud": -99.1648692,
     "significado": "Cuáhutli «árbol» y titlán «junto o entre»: «Entre los árboles».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 25,
@@ -297,7 +297,7 @@
     "latitud": 19.26244,
     "longitud": -98.8969427,
     "significado": "Challi «borde de lago» y co «en»: «En el borde del lago»",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 26,
@@ -309,7 +309,7 @@
     "latitud": 19.8140165,
     "longitud": -99.5261662,
     "significado": "Chía «semilla de chía», atl «agua» y pan «lugar»: «En el río de la chía». Nombrado en honor al conquistador Jerónimo Ruiz de la Mota.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 27,
@@ -321,7 +321,7 @@
     "latitud": 19.2030655,
     "longitud": -99.5478784,
     "significado": "Chapulli «chapulín», tepetl «cerro» y co «en»: «En el cerro del chapulín».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 28,
@@ -333,7 +333,7 @@
     "latitud": 19.5490592,
     "longitud": -98.8831506,
     "significado": "Chiauac «grasa» y tla «abundancia»: «Abundancia de piedras grasosas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 29,
@@ -345,7 +345,7 @@
     "latitud": 19.4143591,
     "longitud": -98.9062442,
     "significado": "Chicoltic «Casa torcida», atl «agua» y pan «lugar»: «Lugar donde se tuerce el agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 30,
@@ -357,7 +357,7 @@
     "latitud": 19.5610249,
     "longitud": -98.8995504,
     "significado": "Chicome «siete», coatl «serpiente» y co «en»: «En siete Serpientes»",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 31,
@@ -369,7 +369,7 @@
     "latitud": 19.4314047,
     "longitud": -98.9582048,
     "significado": "Chimalli «escudo o rodela», hua «poseer» y can «lugar»: «Lugar de escudo o rodela»",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 32,
@@ -381,7 +381,7 @@
     "latitud": 19.3110323,
     "longitud": -100.1418032,
     "significado": "Nombrado así en honor al militar Donato Guerra.nota 3​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 33,
@@ -393,7 +393,7 @@
     "latitud": 19.571859,
     "longitud": -99.0377048,
     "significado": "Ecatl «viento, aire», tepetl «cerro» y co «en»: «En el cerro del viento o del aire». Nombrado en honor al insurgente José María Morelos.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 34,
@@ -405,7 +405,7 @@
     "latitud": 18.9683219,
     "longitud": -98.7328567,
     "significado": "Ecatl «viento, aire», tzintli «pequeño» y go «lugar»: «Lugar consagrado al viento».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 35,
@@ -417,7 +417,7 @@
     "latitud": 19.828228,
     "longitud": -99.2033265,
     "significado": "Huehue «viejo» y toca «habla, lengua»: «Lugar de la lengua antigua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 36,
@@ -429,7 +429,7 @@
     "latitud": 19.950774,
     "longitud": -99.04255,
     "significado": "Huei «grande», pochtecatl «comerciante» y tlan «abundancia»: «Lugar de grandes mercaderes».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 37,
@@ -441,7 +441,7 @@
     "latitud": 19.371098,
     "longitud": -99.3218243,
     "significado": "Huitzquilitl «cardo comestible», can «lugar»: «Lugar lleno de cardos comestibles».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 38,
@@ -453,7 +453,7 @@
     "latitud": 19.5579234,
     "longitud": -99.4168426,
     "significado": "Nombrado así en honor al político y escritor Isidro Fabela.nota 4​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 39,
@@ -465,7 +465,7 @@
     "latitud": 19.3176558,
     "longitud": -98.901606,
     "significado": "Iztatl «sal», pallutl «mojadura» y can «lugar»: «Lugar donde se moja la sal».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 40,
@@ -477,7 +477,7 @@
     "latitud": 18.843579,
     "longitud": -99.6787811,
     "significado": "Iztatl «sal» y pan «sobre»: «Sobre la sal».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 41,
@@ -489,7 +489,7 @@
     "latitud": 19.2631287,
     "longitud": -100.265173,
     "significado": "Iztatl «sal» y pan «sobre»: «Sobre la sal». El término «Oro» alude a sus vetas de oro.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 42,
@@ -501,7 +501,7 @@
     "latitud": 19.5715044,
     "longitud": -99.7627696,
     "significado": "Ixtlahuacan: «Llanura, tierra despoblada de árboles».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 43,
@@ -513,7 +513,7 @@
     "latitud": 19.1797624,
     "longitud": -99.4200318,
     "significado": "Xalli «arena», Atlauhtli «barranca» y co «en»: «En la barranca de arena».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 44,
@@ -525,7 +525,7 @@
     "latitud": 19.7542639,
     "longitud": -99.0924713,
     "significado": "Xalli «arena», tentli «labio, orilla» y co «en»: «En la orilla de la arena».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 45,
@@ -537,7 +537,7 @@
     "latitud": 19.9516945,
     "longitud": -99.535162,
     "significado": "Xilotl «jilote», tepetl «cerro» y co «en»: «En el cerro de los jilotes».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 46,
@@ -549,7 +549,7 @@
     "latitud": 19.4976989,
     "longitud": -99.3974672,
     "significado": "Xilonen —diosa del maíz—, xin «venerar» y co «en»: «Donde se venera a Xilonen».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 47,
@@ -561,7 +561,7 @@
     "latitud": 19.5560943,
     "longitud": -99.6073306,
     "significado": "Xiquipilli «costal, alforja» y co «en»: «Lugar de costales o alforjas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 48,
@@ -573,7 +573,7 @@
     "latitud": 19.7091485,
     "longitud": -99.7885236,
     "significado": "Xocotl «fruta agridulce», titlan «entre»: «Entre árboles de fruta ágridulce».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 49,
@@ -585,7 +585,7 @@
     "latitud": 19.0620844,
     "longitud": -99.5168927,
     "significado": "Zoquitl «lodo, barro», tzintli «pequeño» y co «en»: «En el barrialito».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 50,
@@ -597,7 +597,7 @@
     "latitud": 19.0911407,
     "longitud": -98.881554,
     "significado": "Xóchitl «flor» y tepetl «cerro»: «Cerro de las flores».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 51,
@@ -609,7 +609,7 @@
     "latitud": 19.2791137,
     "longitud": -99.6826821,
     "significado": "Nombrado así en honor al Duque de Lerma.nota 5​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 52,
@@ -621,7 +621,7 @@
     "latitud": 18.9474124,
     "longitud": -99.5141589,
     "significado": "Mallinalli —una planta gramínea—, xóchitl «flor» y co «en»: «En donde se venera a Malinalxóchitl, la flor del malinalli».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 53,
@@ -633,7 +633,7 @@
     "latitud": 19.7067566,
     "longitud": -99.1377217,
     "significado": "Nombrado así en honor al político Melchor Ocampo.nota 6​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 54,
@@ -645,7 +645,7 @@
     "latitud": 19.2621434,
     "longitud": -99.5989735,
     "significado": "Metl «maguey», tepetl «cerro» y co «en»: «En el cerro de los magueyes».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 55,
@@ -657,7 +657,7 @@
     "latitud": 19.2124321,
     "longitud": -99.5853272,
     "significado": "Mexicatl «mexicano», tzintli «reverencia» y co «en»: «En donde habitan los mexicanos distinguidos».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 56,
@@ -669,7 +669,7 @@
     "latitud": 19.6833296,
     "longitud": -99.6666683,
     "significado": "Nombrado así en honor al héroe de la independencia José María Morelos.nota 7​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 57,
@@ -681,7 +681,7 @@
     "latitud": 19.4697619,
     "longitud": -99.2548994,
     "significado": "Nahui «cuatro», calli «casa» y pan «en»: «En las cuatro casas». Nombrado así en honor al presidente Benito Juárez.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 58,
@@ -693,7 +693,7 @@
     "latitud": 19.4324945,
     "longitud": -99.0169328,
     "significado": "Nezahualo «ayunar» y coyotl «coyote»: «Coyote que ayuna». Nombrado así en honor al rey y poeta Nezahualcóyotl.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 59,
@@ -705,7 +705,7 @@
     "latitud": 19.7320396,
     "longitud": -99.067544,
     "significado": "Nextli «ceniza», tlalli «tierra, suelo» y pan «sobre»: «Sobre el suelo de ceniza».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 60,
@@ -717,7 +717,7 @@
     "latitud": 19.6193,
     "longitud": -99.3074185,
     "significado": "Nombrado así en honor al militar Nicolás Romero.nota 8​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 61,
@@ -729,7 +729,7 @@
     "latitud": 19.7777903,
     "longitud": -98.7140088,
     "significado": "Nopalli «nopal», tepetl «cerro» y co «en»: «En el cerro de los nopales».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 62,
@@ -741,7 +741,7 @@
     "latitud": 19.2699076,
     "longitud": -99.4553661,
     "significado": "Ocotl «ocote, pino», yácatl «nariz, principio» y co «en»: «Donde principian los ocotes o pinos».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 63,
@@ -753,7 +753,7 @@
     "latitud": 19.0013496,
     "longitud": -99.3993863,
     "significado": "Oculi «gusano», tla «abundancia»: «Donde abundan los gusanos».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 64,
@@ -765,7 +765,7 @@
     "latitud": 19.8028386,
     "longitud": -100.138199,
     "significado": "Su nombre hace referencia a los yacimientos de oro en la región.nota 9​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 65,
@@ -777,7 +777,7 @@
     "latitud": 19.6996778,
     "longitud": -98.7531575,
     "significado": "Otomitl «Jefe de Otomíes» y pan «en, sobre»: «Lugar de otomíes».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 66,
@@ -789,7 +789,7 @@
     "latitud": 19.1186115,
     "longitud": -100.2972304,
     "significado": "Ocelotl «jaguar» y apan «río»: «Río de los jaguares».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 67,
@@ -801,7 +801,7 @@
     "latitud": 19.4444342,
     "longitud": -99.5338184,
     "significado": "Ocelotl «jaguar», tepetl «cerro» y co «en»: «En el cerro del jaguar».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 68,
@@ -813,7 +813,7 @@
     "latitud": 19.0161301,
     "longitud": -98.80821,
     "significado": "Atl «agua», tzontli «cabello» y pan «sobre»: «Sobre los cabellos del agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 69,
@@ -825,7 +825,7 @@
     "latitud": 19.5610826,
     "longitud": -98.8590085,
     "significado": "Papalotl «mariposa», tla «abundancia, lugar»: «Lugar de mariposas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 70,
@@ -837,7 +837,7 @@
     "latitud": 19.3637572,
     "longitud": -98.9519549,
     "significado": "Recibe este nombre dado que en la época prehispánica, los jefes militares se reunían aquí para firmar los acuerdos de paz.nota 10​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 71,
@@ -849,7 +849,7 @@
     "latitud": 20.2189025,
     "longitud": -99.8064108,
     "significado": "Polo —apellido español—, titlán «entre, lugar»: «Lugar de los Polo».nota 11​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 72,
@@ -861,7 +861,7 @@
     "latitud": 19.1444,
     "longitud": -99.5836,
     "significado": "Nombrado así en honor al insurgente Ignacio López Rayón.nota 12​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 73,
@@ -873,7 +873,7 @@
     "latitud": 19.1611,
     "longitud": -99.5708,
     "significado": "Nombrado así en honor a San Antonio de Padua.nota 13​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 74,
@@ -885,7 +885,7 @@
     "latitud": 19.7128,
     "longitud": -99.9519,
     "significado": "Nombrado así en honor a San Felipe Apóstol. Se le denominó «del Progreso» después de que el pueblo alcanzó la categoría de villa.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 75,
@@ -897,7 +897,7 @@
     "latitud": 19.7,
     "longitud": -98.8333,
     "significado": "Nombrado así en honor a San Martín de Tours. «De las Pirámides» hace referencia a la zona arqueológica que se ubica en su territorio.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 76,
@@ -909,7 +909,7 @@
     "latitud": 19.5474,
     "longitud": -99.8516,
     "significado": "Nombrado así en honor a San Mateo Apóstol. Atenco viene de Atl «agua», entli«orilla» y co «en»: «En la orilla del agua».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 77,
@@ -921,7 +921,7 @@
     "latitud": 19.025,
     "longitud": -100.0083,
     "significado": "Nombrado así en honor a San Simón Apóstol y al presidente Vicente Guerrero.nota 14​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 78,
@@ -933,7 +933,7 @@
     "latitud": 18.6833,
     "longitud": -100.2778,
     "significado": "Nombrado así en honor a Tomás el Apóstol.nota 15​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 79,
@@ -945,7 +945,7 @@
     "latitud": 19.9833,
     "longitud": -99.5,
     "significado": "Tzatzayani «se rompe o hiende», quilit «hierba», atl «agua», pan «en»: «Lugar de agua donde la hierba se rompe o hiende». Nombrado en honor al presidente Benito Juárez.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 80,
@@ -957,7 +957,7 @@
     "latitud": 18.8627911,
     "longitud": -99.9750179,
     "significado": "Zulli «codorniz», tepetl «cerro» y co «en»: «En el cerro de las codornices».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 81,
@@ -969,7 +969,7 @@
     "latitud": 19.7133413,
     "longitud": -98.987542,
     "significado": "Tetl «piedra», camatl «boca» y co «en»: «En la boca de piedra».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 82,
@@ -981,7 +981,7 @@
     "latitud": 18.9090983,
     "longitud": -100.1675205,
     "significado": "Texopill «dedos de los pies», co «en»: «En los dedos de los pies».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 83,
@@ -993,7 +993,7 @@
     "latitud": 19.2049153,
     "longitud": -98.8771393,
     "significado": "Tetl «piedra», mamatlall «escalera» y tla «abundancia»: «Escalera de piedra».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 84,
@@ -1005,7 +1005,7 @@
     "latitud": 19.8263377,
     "longitud": -98.9194072,
     "significado": "Temazcalli «baño de vapor», atl «agua» y pan «en»: «En los baños de vapor».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 85,
@@ -1017,7 +1017,7 @@
     "latitud": 19.9221175,
     "longitud": -100.0239202,
     "significado": "Temazcalli «baño de vapor», tzintli «pequeño», co «en»: «En el pequeño baño de vapor».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 86,
@@ -1029,7 +1029,7 @@
     "latitud": 19.0458271,
     "longitud": -100.0525492,
     "significado": "Temazcalli «baño de vapor», tepetl «cerro» y co «en»: «En el cerro de los baños de vapor».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 87,
@@ -1041,7 +1041,7 @@
     "latitud": 19.4685168,
     "longitud": -99.6037575,
     "significado": "Temoa «bajar, descender» y yan «lugar»: «Lugar donde se desciende».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 88,
@@ -1053,7 +1053,7 @@
     "latitud": 18.9632486,
     "longitud": -99.6022614,
     "significado": "Tenamitl «muralla», tzintli «pequeño», co «en»: «Lugar de la pequeña muralla»",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 89,
@@ -1065,7 +1065,7 @@
     "latitud": 19.1559552,
     "longitud": -98.8677837,
     "significado": "Tenamitl «muralla» y co «en»: «Lugar amurallado». «Del Aire» hace referencia a los fuertes vientos existentes en la estación seca.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 90,
@@ -1077,7 +1077,7 @@
     "latitud": 19.1109089,
     "longitud": -99.6047508,
     "significado": "Teotl «Dios», tenamitl «muralla» y co «en»: «En la muralla sagrada». «Del Valle» indica su ubicación en el Valle de Toluca.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 91,
@@ -1089,7 +1089,7 @@
     "latitud": 19.755485,
     "longitud": -99.1893559,
     "significado": "Tehuilotl «vidrio, cristal de roca», yotl «plenitud» y can «lugar»: «Lugar lleno de vidrio o cristal de roca».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 92,
@@ -1101,7 +1101,7 @@
     "latitud": 19.6880928,
     "longitud": -98.8758635,
     "significado": "Teotl «Dios», hua «posesivo» y can «lugar»: «Lugar que tiene a nuestros dioses».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 93,
@@ -1113,7 +1113,7 @@
     "latitud": 19.5492495,
     "longitud": -98.7625797,
     "significado": "Tepetl «tepetate», ozto «cueva» y co «en»: «En las cuevas de tepetate».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 94,
@@ -1125,7 +1125,7 @@
     "latitud": 19.0283173,
     "longitud": -98.817753,
     "significado": "Tepetl «cerro» e ixpan «en la cara o superficie»: «En la cara o superficie del cerro».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 95,
@@ -1137,7 +1137,7 @@
     "latitud": 19.7192648,
     "longitud": -99.217524,
     "significado": "Tepotzotli «joroba» y tlan «entre»: «Entre jorobados».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 96,
@@ -1149,7 +1149,7 @@
     "latitud": 19.9039067,
     "longitud": -99.141374,
     "significado": "Tequixquitl «tequesquite», atl «agua» y co «en»: «En el agua tequesquitosa».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 97,
@@ -1161,7 +1161,7 @@
     "latitud": 18.9282503,
     "longitud": -99.9417054,
     "significado": "Texcalli «roca» y titlán «entre»: «Entre las rocas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 98,
@@ -1173,7 +1173,7 @@
     "latitud": 19.1270057,
     "longitud": -99.494735,
     "significado": "Texcalli «pedregal», yacátl «nariz, punta» y con «en»: «En la punta del pedregal».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 99,
@@ -1185,7 +1185,7 @@
     "latitud": 19.5089289,
     "longitud": -98.8862218,
     "significado": "Texcalli «peñasco, risco», tlacolt «jarilla» y co «en»: «En la jarilla del risco».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 100,
@@ -1197,7 +1197,7 @@
     "latitud": 19.5089289,
     "longitud": -98.8862218,
     "significado": "Tezontli «tezontle», yotl «plenitud» y can «lugar»: «Lugar lleno de tezontle».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 101,
@@ -1209,7 +1209,7 @@
     "latitud": 19.1745704,
     "longitud": -99.4605193,
     "significado": "Tianquistli «mercado», tentli «labio, orilla» y co «en»: «En la orilla del mercado».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 102,
@@ -1221,7 +1221,7 @@
     "latitud": 19.8763977,
     "longitud": -99.7356023,
     "significado": "Tetl «piedra», milli «sementera» y pan «sobre, en»: «En la sementera de piedra».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 103,
@@ -1233,7 +1233,7 @@
     "latitud": 19.205735,
     "longitud": -98.8011942,
     "significado": "Tlalli «tierra», manalli «aplanada» y co «lugar»: «Lugar de tierra aplanada».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 104,
@@ -1245,7 +1245,7 @@
     "latitud": 19.5464134,
     "longitud": -99.1648411,
     "significado": "Tlalli «tierra», nepantla «en medio»: «En medio de la tierra». Nombrado en honor al gobernador y médico Gustavo Baz Prada.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 105,
@@ -1257,7 +1257,7 @@
     "latitud": 18.6168681,
     "longitud": -100.2077766,
     "significado": "Tlatla «arder», yan «lugar»: «Tierra que arde».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 106,
@@ -1269,7 +1269,7 @@
     "latitud": 19.294261,
     "longitud": -99.7012546,
     "significado": "Toloqui «inclinar la cabeza», co «en»: «En donde está el dios Tolo».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 107,
@@ -1281,7 +1281,7 @@
     "latitud": 18.8057529,
     "longitud": -99.6763218,
     "significado": "Tonatiuh «sol», co «lugar»: «Lugar de sol».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 108,
@@ -1293,7 +1293,7 @@
     "latitud": 19.6882413,
     "longitud": -99.1372376,
     "significado": "Tollin «tule», tepetl «cerro» y co «en»: «En el cerro del tule».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 109,
@@ -1305,7 +1305,7 @@
     "latitud": 19.6457412,
     "longitud": -99.1825013,
     "significado": "Tollin «tule», titlán «entre»: «Lugar entre tules».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 110,
@@ -1317,7 +1317,7 @@
     "latitud": 19.1820952,
     "longitud": -100.1634028,
     "significado": "Nombrado así en honor al presidente Nicolás Bravo.nota 16​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 111,
@@ -1329,7 +1329,7 @@
     "latitud": 19.3762014,
     "longitud": -100.1537683,
     "significado": "Nombrado así en honor al héroe de la independencia Ignacio Allende.nota 17​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 112,
@@ -1341,7 +1341,7 @@
     "latitud": 19.7317654,
     "longitud": -99.4837233,
     "significado": "Nombrado así en referencia a la producción de carbón en la cabecera municipal.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 113,
@@ -1353,7 +1353,7 @@
     "latitud": 18.9596724,
     "longitud": -99.646487,
     "significado": "Nombrado así en honor al insurgente y presidente Vicente Guerrero.nota 18​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 114,
@@ -1365,7 +1365,7 @@
     "latitud": 19.4349173,
     "longitud": -100.0050714,
     "significado": "Nombrado así en honor al primer presidente del país, Guadalupe Victoria.nota 19​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 115,
@@ -1377,7 +1377,7 @@
     "latitud": 19.4096534,
     "longitud": -99.5409503,
     "significado": "Xonacatl «cebolla», tlan «entre»: «Entre las cebollas».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 116,
@@ -1389,7 +1389,7 @@
     "latitud": 19.0742547,
     "longitud": -100.2637905,
     "significado": "Zacatzontetl «césped», atl «agua» y pan «sobre»: «Sobre agua de céspedes».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 117,
@@ -1401,7 +1401,7 @@
     "latitud": 18.7142006,
     "longitud": -99.9505567,
     "significado": "Tzacualli «pirámide» y pan «sobre»: «Sobre la pirámide».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 118,
@@ -1413,7 +1413,7 @@
     "latitud": 19.2836398,
     "longitud": -99.760454,
     "significado": "Tzanacan «murciélago», tepetl «cerro» y co «en»: «En el cerro de los murciélagos».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 119,
@@ -1425,7 +1425,7 @@
     "latitud": 18.8367998,
     "longitud": -99.5900444,
     "significado": "Tzompantli «zompantli», hua «poseer» y can «lugar»: «Lugar para guardar los cráneos de los sacrificados».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 120,
@@ -1437,7 +1437,7 @@
     "latitud": 19.7998188,
     "longitud": -99.1246031,
     "significado": "Tzompantli «zompantli», co «lugar»: «Lugar del zompantli».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 121,
@@ -1449,7 +1449,7 @@
     "latitud": 19.657687,
     "longitud": -99.2958126,
     "significado": "Cuáhutli «árbol» y titlán «junto o entre»; iz «tu, tuyo» y calli «casa»: «Tu casa entre los árboles».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 122,
@@ -1461,7 +1461,7 @@
     "latitud": 19.2825545,
     "longitud": -99.0138998,
     "significado": "Su nombre se refiere a su ubicación en el valle del antiguo lago de Chalco, y que el poblamiento de la zona se inició gracias al programa «Solidaridad».",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 123,
@@ -1473,7 +1473,7 @@
     "latitud": 18.91966,
     "longitud": -100.3062969,
     "significado": "Nombrado así en honor al fundador de Villa Luvianos, Cristóbal Lubiano.nota 20​",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 124,
@@ -1485,7 +1485,7 @@
     "latitud": 19.6359544,
     "longitud": -100.2813478,
     "significado": "Nombrado así en honor a San José. «Del Rincón» hace referencia al difícil acceso y relativo aislamiento de su cabecera municipal.",
-    "desastre": ""
+    "desastre": []
   },
   {
     "igecem": 125,
@@ -1497,6 +1497,6 @@
     "latitud": 19.6798286,
     "longitud": -99.0763197,
     "significado": "Tonantzin «Nuestra madre» y tlan «lugar»: «Lugar de nuestra madre».",
-    "desastre": ""
+    "desastre": []
   }
   ]
