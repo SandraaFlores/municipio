@@ -14,13 +14,18 @@
       <button class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal" data-target="#modalUser">Agregar</button>
     </div>
 
-    <div class="row m-0">
+    <div class="col-md-8 mb-3 text-right offset-md-2">
       <div class="form-group">
-        <input type="text" class="form-control" name="filterMun" placeholder="Buscar" [(ngModel)]="filterMun">
+        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por nombre" [(ngModel)]="filterMun">
+      </div>
+    </div>
+    <div class="col-md-8 mb-3 text-right offset-md-2">
+      <div class="form-group">
+        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por IGECEM" [(ngModel)]="filterIGECEM">
       </div>
     </div>
 
-    <div class="col-md-6  offset-md-3" *ngFor="let user of users | filter: filterMun" >
+    <div class="col-md-6  offset-md-3" *ngFor="let user of users | filter: [filterMun,filterIGECEM]" >
       <div class="card mt-4">
         <h3 class="card-header bg-light ">{{user.data.nombre}}</h3>
         <div class="card-body">

@@ -3,7 +3,7 @@ import {SwalComponent} from '@sweetalert2/ngx-sweetalert2';
 import {FirestoreService} from '../../services/firestore.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import { MapsAPILoader, MouseEvent } from '@agm/core';
+import {MapsAPILoader, MouseEvent} from '@agm/core';
 
 @Component({
   selector: 'app-municipios',
@@ -12,13 +12,13 @@ import { MapsAPILoader, MouseEvent } from '@agm/core';
 })
 export class MunicipiosComponent implements OnInit {
   title: string;
-  latitude: number;
-  longitude: number;
-  zoom: number;
+  latitude = 20.7999062;
+  longitude = -105.1031638;
+  zoom = 5.27;
   address: string;
   private geoCoder;
   filterMun = '';
-
+  filterIGECEM = '';
   public users = [];
   public user;
   climas = new FormControl();
@@ -33,7 +33,7 @@ export class MunicipiosComponent implements OnInit {
   // @ts-ignore
   @ViewChild('alertSwal') private alertSwal: SwalComponent;
   // @ts-ignore
-  @ViewChild('search', { static: false }) searchElementRef: ElementRef;
+  @ViewChild('search', {static: false}) searchElementRef: ElementRef;
 
   constructor(private firestoreService: FirestoreService,
               private modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
@@ -73,28 +73,6 @@ export class MunicipiosComponent implements OnInit {
         this.users.push({
           id: userData.payload.doc.id,
           data: userData.payload.doc.data()
-        });
-      });
-    });
-
-    this.mapsAPILoader.load().then(() => {
-      this.setCurrentLocation();
-      this.geoCoder = new google.maps.Geocoder();
-
-      const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ['address']
-      });
-      autocomplete.addListener('place_changed', () => {
-        this.ngZone.run(() => {
-
-          const place: google.maps.places.PlaceResult = autocomplete.getPlace();
-
-          if (place.geometry === undefined || place.geometry === null) {
-            return;
-          }
-          this.latitude = place.geometry.location.lat();
-          this.longitude = place.geometry.location.lng();
-          this.zoom = 12;
         });
       });
     });
@@ -232,7 +210,7 @@ export class MunicipiosComponent implements OnInit {
   }
 
   getAddress(latitude, longitude) {
-    this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
+    this.geoCoder.geocode({location: {lat: latitude, lng: longitude}}, (results, status) => {
       console.log(results);
       console.log(status);
       if (status === 'OK') {
