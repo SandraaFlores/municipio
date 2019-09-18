@@ -19,6 +19,9 @@ export class MunicipiosComponent implements OnInit {
   private geoCoder;
   filterMun = '';
   filterIGECEM = '';
+  filterZona = '';
+
+
   public users = [];
   public user;
   climas = new FormControl();
@@ -32,11 +35,10 @@ export class MunicipiosComponent implements OnInit {
   @ViewChild('exampleModal') private modal;
   // @ts-ignore
   @ViewChild('alertSwal') private alertSwal: SwalComponent;
-  // @ts-ignore
-  @ViewChild('search', {static: false}) searchElementRef: ElementRef;
+
 
   constructor(private firestoreService: FirestoreService,
-              private modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
+              public modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
               private ngZone: NgZone) {
     this.newMunicipioForm = new FormGroup({
       igecem: new FormControl('', Validators.required),
@@ -101,6 +103,9 @@ export class MunicipiosComponent implements OnInit {
         significado: user.data.significado,
         desastre: user.data.desastre
       });
+      this.latitude = user.data.latitud;
+      this.longitude = user.data.longitud;
+      this.zoom = 10;
       this.currentStatus = 2;
     }
   }
@@ -206,7 +211,7 @@ export class MunicipiosComponent implements OnInit {
     console.log($event);
     this.latitude = $event.coords.lat;
     this.longitude = $event.coords.lng;
-    this.getAddress(this.latitude, this.longitude);
+
   }
 
   getAddress(latitude, longitude) {
@@ -225,6 +230,12 @@ export class MunicipiosComponent implements OnInit {
       }
 
     });
+  }
+
+  mapClicked(event: MouseEvent) {
+    this.latitude = event.coords.lat;
+    this.longitude = event.coords.lng;
+    console.log('hjnkl');
   }
 
 }

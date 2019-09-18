@@ -7,35 +7,53 @@
     [focusCancel]="true">
 </swal>
 
+<swal
+    #alertSwal
+    title=""
+    text=""
+    type="success">
+</swal>
+
 
 <div style="width: 100vw;">
   <div class="row m-0">
     <div class="col-md-8 mb-3 text-right offset-md-2">
-      <button class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal" data-target="#modalUser">Agregar</button>
+      <button class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal"
+              data-target="#modalUser">Agregar
+      </button>
     </div>
 
-    <div class="col-md-8 mb-3 text-right offset-md-2">
+    <div class="col-md-6 mb-3 text-right offset-md-2">
       <div class="form-group">
-        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por nombre" [(ngModel)]="filterMun">
+        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por Nombre"
+               [(ngModel)]="filterMun">
       </div>
     </div>
-    <div class="col-md-8 mb-3 text-right offset-md-2">
+    <div class="col-md-6 mb-3 text-right offset-md-2">
       <div class="form-group">
-        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por IGECEM" [(ngModel)]="filterIGECEM">
+        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por IGECEM"
+               [(ngModel)]="filterIGECEM">
       </div>
     </div>
 
-    <div class="col-md-6  offset-md-3" *ngFor="let user of users | filter: [filterMun,filterIGECEM]" >
+    <div class="col-md-6 mb-3 text-right offset-md-2">
+      <div class="form-group">
+        <input type="text" class="form-control" name="filterMun" placeholder="Buscar por Zona"
+               [(ngModel)]="filterZona">
+      </div>
+    </div>
+
+    <div class="col-md-6  offset-md-3" *ngFor="let user of users | filter: [filterMun,filterIGECEM, filterZona] ">
       <div class="card mt-4">
         <h3 class="card-header bg-light ">{{user.data.nombre}}</h3>
         <div class="card-body">
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-                <div class="col-md-6" >
+                <div class="col-md-6">
                   <b>IGECEM: </b>{{user.data.igecem}}
                 </div>
-                <div class="col-md-6" >
+                <div class="col-md-6">
                   <b>Superficie: </b>{{user.data.superficie}}
                 </div>
                 <div class="col-md-6">
@@ -63,12 +81,14 @@
             </div>
             <div class="col-md-3   ">
               <button class="btn btn-block btn-primary btn1"
-                      (click)="openModal(content, newMunicipioForm,user)">Editar</button>
+                      (click)="openModal(content, newMunicipioForm,user)">Editar
+              </button>
             </div>
             <div class="col-md-3 ">
               <button class="btn btn-block btn-danger btn2"
                       [swal]="deleteSwal"
-                      (confirm)="delete(user)">Eliminar</button>
+                      (confirm)="delete(user)">Eliminar
+              </button>
             </div>
           </div>
         </div>
@@ -79,110 +99,114 @@
 
 
 <ng-template #content>
-  <div class="row m-0 ">
-    <div class="modal-header" >
-      <h5 class="modal-title">Nuevo municipio</h5>
-    </div>
+  <div class="modal-header">
+    <h5 class="modal-title">Nuevo municipio</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modalService.dismissAll()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row m-0 ">
+      <div class="col-md-12 p6">
+        <form (ngSubmit)="upsert(newMunicipioForm.value)" [formGroup]="newMunicipioForm">
+          <div class="row">
+            <input type="hidden" formControlName="id">
 
-    <div class="col-md-12 p6">
-      <form (ngSubmit)="upsert(newMunicipioForm.value)" [formGroup]="newMunicipioForm">
-        <div class="row">
-          <input type="hidden" formControlName="id">
-
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="igecem">IGECEM</label>
-              <input type="text" formControlName="igecem" class="form-control" id="igecem">
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" formControlName="nombre" class="form-control" id="nombre">
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="cabecera">Cabecera</label>
-              <input class="form-control" type="text" formControlName="cabecera" id="cabecera">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="superficie">Superficie(km2)</label>
-              <input class="form-control" type="text" formControlName="superficie" id="superficie">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="altitud">Altitud</label>
-              <input class="form-control" type="text" formControlName="altitud" id="altitud">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <mat-form-field>
-                <mat-label>Climas</mat-label>
-                <mat-select formControlName="clima" id="clima">
-                  <mat-option *ngFor="let climas of tiposClimas" [value]="climas">{{climas}}</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="latitud">Latitud</label>
-              <input class="form-control" type="text" formControlName="latitud" id="latitud"  value="{{latitude}}" readonly="readonly"></div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="longitud">Longitud</label>
-              <input class="form-control" type="text" formControlName="longitud" id="longitud" value="{{longitude}}" readonly="readonly"></div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="significado">Significado</label>
-              <input class="form-control" type="text" formControlName="significado" id="significado">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <mat-form-field>
-                <mat-label>Desastre natural</mat-label>
-                <mat-select multiple formControlName="desastre" id="desastre">
-                  <mat-option *ngFor="let desastre of tiposDesastres" [value]="desastre">{{desastre}}</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-          </div>
-
-          <!-- app.component.html -->
-          <div class="container">
-            <div class="form-group">
-              <label>Ingresa dirección</label>
-              <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Busca una dirección" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="igecem">IGECEM</label>
+                <input type="text" formControlName="igecem" class="form-control" id="igecem">
+              </div>
             </div>
 
-            <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
-              <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
-                          (dragEnd)="markerDragEnd($event)"></agm-marker>
-            </agm-map>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" formControlName="nombre" class="form-control" id="nombre">
+              </div>
+            </div>
 
-            <h5>Dirección: {{address}}</h5>
-            <div>Latitud: {{latitude}}</div>
-            <div>Longitud: {{longitude}}</div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="cabecera">Cabecera</label>
+                <input class="form-control" type="text" formControlName="cabecera" id="cabecera">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="superficie">Superficie(km2)</label>
+                <input class="form-control" type="text" formControlName="superficie" id="superficie">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="altitud">Altitud</label>
+                <input class="form-control" type="text" formControlName="altitud" id="altitud">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <mat-form-field>
+                  <mat-label>Climas</mat-label>
+                  <mat-select formControlName="clima" id="clima">
+                    <mat-option *ngFor="let climas of tiposClimas" [value]="climas">{{climas}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="latitud">Latitud</label>
+                <input class="form-control" type="text" formControlName="latitud" id="latitud" value="{{latitude}}"
+                       readonly="readonly"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="longitud">Longitud</label>
+                <input class="form-control" type="text" formControlName="longitud" id="longitud" value="{{longitude}}"
+                       readonly="readonly"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="significado">Significado</label>
+                <input class="form-control" type="text" formControlName="significado" id="significado">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <mat-form-field>
+                  <mat-label>Desastre natural</mat-label>
+                  <mat-select multiple formControlName="desastre" id="desastre">
+                    <mat-option *ngFor="let desastre of tiposDesastres" [value]="desastre">{{desastre}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- app.component.html -->
+            <div class="container">
+              <div class="form-group">
+
+                <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="mapClicked($event)">
+                  <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                              (dragEnd)="markerDragEnd($event)"></agm-marker>
+                </agm-map>
+
+                <h5>Dirección: {{address}}</h5>
+                <div>Latitud: {{latitude}}</div>
+                <div>Longitud: {{longitude}}</div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 text-center">
+              <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">
+                Agregar
+              </button>
+            </div>
           </div>
-
-
-          <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">
-              Agregar
-            </button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </ng-template>

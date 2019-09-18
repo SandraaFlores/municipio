@@ -1,0 +1,7 @@
+{
+  "appId": "com.municipios.app",
+  "appName": "Municipios",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
