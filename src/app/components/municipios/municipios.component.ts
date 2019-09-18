@@ -4,6 +4,7 @@ import {FirestoreService} from '../../services/firestore.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {MapsAPILoader, MouseEvent} from '@agm/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-municipios',
@@ -21,6 +22,11 @@ export class MunicipiosComponent implements OnInit {
   filterIGECEM = '';
   filterZona = '';
 
+  btnact: boolean;
+  btncancel: boolean;
+  btneliminar: boolean;
+  btneditar: boolean;
+
 
   public users = [];
   public user;
@@ -31,6 +37,7 @@ export class MunicipiosComponent implements OnInit {
   public documentId = null;
   public currentStatus = 1;
   public newMunicipioForm;
+  correo: string;
   // @ts-ignore
   @ViewChild('exampleModal') private modal;
   // @ts-ignore
@@ -39,7 +46,10 @@ export class MunicipiosComponent implements OnInit {
 
   constructor(private firestoreService: FirestoreService,
               public modalService: NgbModal, private mapsAPILoader: MapsAPILoader,
-              private ngZone: NgZone) {
+              private ngZone: NgZone,
+              private router: Router) {
+    this.correo = '' + this.router.getCurrentNavigation().extras.state.correo; // should log out 'bar'
+    console.log(this.correo);
     this.newMunicipioForm = new FormGroup({
       igecem: new FormControl('', Validators.required),
       nombre: new FormControl('', Validators.required),
@@ -66,6 +76,14 @@ export class MunicipiosComponent implements OnInit {
       significado: '',
       desastre: ''
     });
+
+    if (this.correo.indexOf('admin@admin.com') !== -1) {
+      // Ususario con el que se muestran los datos
+      this.btnact = true;
+      this.btncancel = true;
+      this.btneliminar = true;
+      this.btneditar = true;
+    }
   }
 
   ngOnInit() {

@@ -299,11 +299,12 @@
   />
   <span>Bienvenido a {{title}}</span>
     <div class="spacer"></div>
+  <p *ngIf="authUser != null">
+    <button type="button" class="btn btn-light" (click)="logout()">Salir</button>
+  </p>
 </div>
 
 <div class="content" role="main">
   <router-outlet></router-outlet>
 </div>
-
-
 

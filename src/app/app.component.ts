@@ -20,6 +20,7 @@ export class AppComponent {
 
   logout() {
     this.authService.logout();
+    this.route.navigateByUrl('/login');
   }
 
 }

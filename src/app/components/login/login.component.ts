@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       this.alertSwal.type = 'success';
       this.alertSwal.text = 'Bienvenido';
       this.alertSwal.fire();
+      this.route.navigate(['/municipio'], { state: { correo:  customerData.email}});
     }).catch(error => {
       console.log(error);
       console.log(this.alertSwal);

@@ -18,7 +18,7 @@
 <div style="width: 100vw;">
   <div class="row m-0">
     <div class="col-md-8 mb-3 text-right offset-md-2">
-      <button class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal"
+      <button *ngIf="btnact" class="btn btn-primary btn2" (click)="openModal(content, newMunicipioForm)" data-toggle="modal"
               data-target="#modalUser">Agregar
       </button>
     </div>
@@ -80,12 +80,12 @@
               </div>
             </div>
             <div class="col-md-3   ">
-              <button class="btn btn-block btn-primary btn1"
+              <button *ngIf="btneditar" class="btn btn-block btn-primary btn1"
                       (click)="openModal(content, newMunicipioForm,user)">Editar
               </button>
             </div>
             <div class="col-md-3 ">
-              <button class="btn btn-block btn-danger btn2"
+              <button *ngIf="btneliminar" class="btn btn-block btn-danger btn2"
                       [swal]="deleteSwal"
                       (confirm)="delete(user)">Eliminar
               </button>
@@ -200,7 +200,7 @@
 
 
             <div class="col-md-12 text-center">
-              <button type="submit" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">
+              <button type="submit" *ngIf="btnact" class="btn btn-primary" [disabled]="!newMunicipioForm.valid">
                 Agregar
               </button>
             </div>
